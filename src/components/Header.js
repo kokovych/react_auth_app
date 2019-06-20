@@ -9,7 +9,12 @@ import LoginPage from "./Login"
 import RegisterPage from "./Register"
 
 function HomePage() {
-    return <h2>Home</h2>;
+    return (
+        <div>
+            <h2>Home</h2>
+            {/*<div> smt</div>*/}
+        </div>
+    )
 }
 
 
@@ -17,7 +22,7 @@ function AppRouter() {
     return (
         <Router>
             <div>
-                <nav>
+                <nav className="">
                     <ul>
                         <li>
                             <Link to="/">Home</Link>
