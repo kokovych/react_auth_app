@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-
+import SignUpForm from './SignUpForm';
 
 export default class RegisterPage extends Component {
 
     render() {
         return (
-            <h2>Registration</h2>
+            <SignUpForm />
         );
     }
 }
