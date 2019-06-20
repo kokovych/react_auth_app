@@ -1,9 +1,9 @@
 import React from "react";
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import {
-    HashRouter as Router,
-        Route, Link
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import {
+//     HashRouter as Router,
+//         Route, Link
+// } from 'react-router-dom';
 
 import LoginPage from "./Login"
 import RegisterPage from "./Register"
@@ -32,8 +32,8 @@ function AppRouter() {
                 </nav>
 
                 <Route exact path="/" component={HomePage} />
-                <Route path="/:login/" component={LoginPage} />
-                <Route path="/:registration/" component={RegisterPage} />
+                <Route path="/login/" component={LoginPage} />
+                <Route path="/registration/" component={RegisterPage} />
             </div>
         </Router>
     );
