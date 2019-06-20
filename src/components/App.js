@@ -6,7 +6,10 @@ import AppRouter from './Header'
 class App extends Component {
     render() {
         return (
-            <AppRouter/>
+            <div className="jumbotron">
+                <AppRouter/>
+            </div>
+
     );
     }
 }

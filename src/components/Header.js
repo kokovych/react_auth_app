@@ -22,7 +22,7 @@ function AppRouter() {
     return (
         <Router>
             <div>
-                <nav className="">
+                <nav className="navbar navbar-default">
                     <ul>
                         <li>
                             <Link to="/">Home</Link>
