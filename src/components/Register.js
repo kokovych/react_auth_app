@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import SignUpForm from './SignUpForm';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { userSignupRequest } from '../actions/signUpAcrion';
+import { userSignupRequest } from '../actions/signUpAction';
 
 
 class RegisterPage extends Component {
