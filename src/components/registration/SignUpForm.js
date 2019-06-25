@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import validateInput from '../validations/signup';
 
+import validateInput from '../../validations/signup';
+import InputFieldGroup from '../common/InputFiledGroup'
 
 
 class SignUpForm extends Component{
@@ -63,41 +64,32 @@ class SignUpForm extends Component{
         return (
             <form onSubmit={this.onSubmit}>
                 <h2 className="">Registration form:</h2>
-                <div className={classnames("form-group", { 'has-danger': errors.email })}>
-                    <label className="control-label">Email:</label>
-                    <input
-                        value={this.state.email}
-                        onChange={this.onChange}
-                        type="text"
-                        name="email"
-                        className="form-control"
-                    />
-                    {errors.email && <span className="help-block">{errors.email}</span>}
-                </div>
+                <InputFieldGroup
+                    error={errors.email}
+                    label="Email"
+                    onChange={this.onChange}
+                    value={this.state.email}
+                    field="email"
+                    type="email"
+                />
 
-                <div className={classnames("form-group", { 'has-danger': errors.password })}>
-                    <label className="control-label">Password:</label>
-                    <input
-                        value={this.state.password}
-                        onChange={this.onChange}
-                        type="password"
-                        name="password"
-                        className="form-control"
-                    />
-                    {errors.password && <span className="help-block ">{errors.password}</span>}
-                </div>
+                <InputFieldGroup
+                    error={errors.password}
+                    label="Password"
+                    onChange={this.onChange}
+                    value={this.state.password}
+                    field="password"
+                    type="password"
+                />
 
-                <div className={classnames("form-group", { 'has-danger': errors.passwordConfirm })}>
-                    <label className="control-label">Confirm Password:</label>
-                    <input
-                        value={this.state.passwordConfirm}
-                        onChange={this.onChange}
-                        type="password"
-                        name="passwordConfirm"
-                        className="form-control"
-                    />
-                    {errors.passwordConfirm && <span className="help-block ">{errors.passwordConfirm}</span>}
-                </div>
+                <InputFieldGroup
+                    error={errors.passwordConfirm}
+                    label="Confirm password"
+                    onChange={this.onChange}
+                    value={this.state.passwordConfirm}
+                    field="passwordConfirm"
+                    type="password"
+                />
 
                 <div className="form-group">
                     <button disabled={this.state.isLoading} className="btn btn-primary btn-lg">
