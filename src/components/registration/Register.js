@@ -11,7 +11,7 @@ class RegisterPage extends Component {
         console.log('userSignupRequest');
         console.log(userSignupRequest);
         return (
-            <SignUpForm userSignupRequest={userSignupRequest}/>
+            <SignUpForm userSignupRequest={userSignupRequest} history={this.props.history}/>
         );
     }
 }

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
 import validateInput from '../../validations/signup';
 import InputFieldGroup from '../common/InputFiledGroup'
@@ -47,7 +46,8 @@ class SignUpForm extends Component{
                 (data) => {
                     console.log("SUCCES");
                     console.log(data);
-                    this.setState({ errors: {}, isLoading: false })
+                    this.setState({ errors: {}, isLoading: false });
+                    this.props.history.push('/')
                 },
                 ( data ) => {
                     console.log("ERROR");
@@ -104,7 +104,8 @@ class SignUpForm extends Component{
 }
 
 SignUpForm.propTypes = {
-    userSignupRequest: PropTypes.func.isRequired
+    userSignupRequest: PropTypes.func.isRequired,
+    history: PropTypes.object.isRequired
 }
 
 export default SignUpForm;
