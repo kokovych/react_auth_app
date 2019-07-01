@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import FlashMessagesList from './flash/FlashMessagesList';
+
 // import {
 //     HashRouter as Router,
 //         Route, Link
@@ -36,10 +38,15 @@ function AppRouter() {
                     </ul>
                 </nav>
 
+                <div className="container">
+                    <FlashMessagesList />
+                </div>
+
                 <Route exact path="/" component={HomePage} />
                 <Route path="/login/" component={LoginPage} />
                 <Route path="/registration/" component={RegisterPage} />
             </div>
+
         </Router>
     );
 }
